@@ -599,6 +599,10 @@ img {
     color: var(--secondary-text-color);
   }
 }
+.team {
+  margin-top: var(--section-mobile-pt);
+  margin-bottom: var(--section-mobile-pb);
+}
 .team .title {
   font-size: 28px;
   line-height: 1.17;
