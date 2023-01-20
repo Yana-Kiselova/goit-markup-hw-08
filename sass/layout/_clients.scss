@@ -3,14 +3,21 @@
 //   padding-bottom: var(--section-pb);
 // }
 
-// .clients__title {
-//   margin-bottom: 50px;
-//   color: var(--secondary-text-color);
-//   text-align: center;
-//   font-size: 36px;
-//   line-height: 1.16;
-// }
+.clients__title {
+  margin-bottom: 30px;
+  color: var(--secondary-text-color);
+  text-align: center;
+  font-size: 28px;
+  line-height: 1.17;
+}
 
+@media (min-width: 1200px) {
+  .clients__title {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.16;
+  }
+}
 // .clients__list {
 //   display: flex;
 //   justify-content: space-between;
