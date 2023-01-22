@@ -1,50 +1,77 @@
-// .clients {
-//   padding-top: var(--section-pt);
-//   padding-bottom: var(--section-pb);
-// }
+.clients {
+  padding-top: var(--section-mobile-pt);
+  padding-bottom: var(--section-mobile-pb);
+  &__title {
+    margin-bottom: 30px;
+    color: var(--secondary-text-color);
+    text-align: center;
+    font-size: 28px;
+    line-height: 1.17;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+  }
+  &__item {
+    margin-left: 30px;
+    margin-top: 30px;
+    flex-basis: calc(100% / 2 - 30px);
+  }
+  .clients__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 32px;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-.clients__title {
-  margin-bottom: 30px;
-  color: var(--secondary-text-color);
-  text-align: center;
-  font-size: 28px;
-  line-height: 1.17;
+    &:hover,
+    &:focus {
+      border: 1px solid var(--accent-color);
+    }
+  }
+
+  &__icon {
+    fill: #afb1b8;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &__link:hover &,
+    &__link:focus & {
+      fill: var(--accent-color);
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .clients__item {
+    flex-basis: calc(100% / 3 - 30px);
+  }
 }
 
 @media (min-width: 1200px) {
-  .clients__title {
-    margin-bottom: 50px;
-    font-size: 36px;
-    line-height: 1.16;
+  .clients {
+    padding-top: var(--section-pt);
+    padding-bottom: var(--section-pb);
+
+    &__title {
+      margin-bottom: 50px;
+      font-size: 36px;
+      line-height: 1.16;
+    }
+    &__list {
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: center;
+      margin-left: 0;
+      margin-top: 0;
+    }
+    &__item {
+      flex-basis: unset;
+      margin-left: 0;
+      margin-top: 0;
+    }
   }
 }
-// .clients__list {
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-// }
-
-// .clients__link {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   padding: 16px 32px;
-//   border: 1px solid #afb1b8;
-//   border-radius: 4px;
-//   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-//   &:hover,
-//   &:focus {
-//     border: 1px solid var(--accent-color);
-//   }
-// }
-
-// .clients__icon {
-//   fill: #afb1b8;
-//   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-//   .clients__link:hover &,
-//   .clients__link:focus & {
-//     fill: var(--accent-color);
-//   }
-// }
