@@ -1,6 +1,4 @@
 .footer {
-  padding-top: var(--section-mobile-pt);
-  padding-bottom: var(--section-mobile-pb);
   background-color: #2f303a;
 
   &__contact-wrapper {
@@ -103,6 +101,12 @@
     line-height: 1.25;
   }
 }
+
+@media (min-width: 768px) {
+  .subscription__input {
+    width: 450px;
+  }
+}
 @media (max-width: 1199px) {
   .footer-social {
     margin-top: var(--section-mobile-pt);
@@ -117,13 +121,6 @@
     }
   }
 }
-
-@media (min-width: 768px) {
-  .subscription__input {
-    width: 450px;
-  }
-}
-
 @media (min-width: 1200px) {
   .footer-logo {
     margin-bottom: 100px;
@@ -135,10 +132,13 @@
   }
   .footer-social {
     margin-left: 70px;
-    margin-bottom: var(--section-pb);
+    margin-bottom: 100px;
+    margin-top: 72px;
   }
   .subscription {
     margin-left: 93px;
+    margin-top: 72px;
+    margin-bottom: 94px;
   }
   .subscription__input {
     width: 450px;
