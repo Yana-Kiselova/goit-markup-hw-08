@@ -9,7 +9,6 @@
   font-weight: 700;
   font-size: 24px;
   line-height: 1.16;
-  // margin-right: 93px;
 }
 
 .logo--light-theme {
@@ -34,20 +33,45 @@
   color: var(--accent-color);
 }
 
-.mobile-menu__button-close {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  &:focus,
-  &:hover {
-    color: var(--accent-color);
-  }
-}
-
 .button-burger__icon,
 .mobile-menu__button-close-icon {
   width: 40px;
   height: 40px;
+}
+
+.contact-list__icon,
+.contact-list__link-icon {
+  margin-right: 8px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  align-items: center;
+  margin-left: auto;
+
+  &__item {
+    position: relative;
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+
+  &__link {
+    color: var(--secondary-text-color);
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+  }
 }
 
 .mobile-menu {
@@ -62,6 +86,15 @@
   background-color: antiquewhite;
   // transform: translateY(-100%);
 
+  &__button-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    &:focus,
+    &:hover {
+      color: var(--accent-color);
+    }
+  }
   &__list {
     margin-bottom: 302px;
   }
@@ -114,79 +147,95 @@
   }
 }
 
-// .nav {
-//   display: flex;
-//   align-items: center;
-// }
+.active {
+  color: var(--accent-color);
 
-// .menu {
-//   display: flex;
-//   align-items: center;
-//   margin-left: auto;
-// }
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    bottom: -28px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--accent-color);
+  }
+}
 
-// .contact-list {
-//   display: flex;
-//   align-items: center;
-//   margin-left: auto;
-// }
+.contact-list__link,
+.contact-list__tel-link {
+  //   display: flex;
+  //   align-items: center;
+  font-weight: 500;
+  //   line-height: 1.14;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-// .contact-list__icon,
-// .contact-list__link-icon {
-//   margin-right: 10px;
-// }
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
 
-// .menu__item {
-//   position: relative;
-//   &:not(:last-child) {
-//     margin-right: 50px;
-//   }
-// }
+@media (min-width: 768px) {
+  .logo {
+    margin-right: 88px;
+  }
 
-// .menu__link {
-//   color: var(--secondary-text-color);
-//   font-weight: 500;
-//   line-height: 1.14;
-//   letter-spacing: 0.02em;
-//   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  .contact-list {
+    display: block;
+  }
 
-//   &:hover,
-//   &:focus {
-//     color: var(--accent-color);
-//   }
-// }
+  .menu {
+    display: flex;
+    flex-direction: row;
+  }
 
-// .active {
-//   color: var(--accent-color);
+  .button-burger {
+    display: none;
+  }
+}
 
-//   &::after {
-//     position: absolute;
-//     content: "";
-//     display: block;
-//     width: 100%;
-//     bottom: -32.5px;
-//     height: 4px;
-//     border-radius: 2px;
-//     background-color: var(--accent-color);
-//   }
-// }
+@media (min-width: 1200px) {
+  .logo {
+    margin-right: 93px;
+  }
 
-// .contact-list__link,
-// .contact-list__tel-link {
-//   display: flex;
-//   align-items: center;
-//   font-weight: 500;
-//   line-height: 1.14;
-//   letter-spacing: 0.02em;
-//   color: var(--primary-text-color);
-//   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  .contact-list {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+  .contact-list__icon,
+  .contact-list__link-icon {
+    margin-right: 10px;
+  }
 
-//   &:hover,
-//   &:focus {
-//     color: var(--accent-color);
-//   }
-// }
+  .contact-list__link,
+  .contact-list__tel-link {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+  }
 
-// .contact-list__link {
-//   margin-right: 50px;
-// }
+  .active {
+    color: var(--accent-color);
+
+    &::after {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 100%;
+      bottom: -32.5px;
+    }
+  }
+
+  .contact-list__link {
+    margin-right: 50px;
+  }
+}
