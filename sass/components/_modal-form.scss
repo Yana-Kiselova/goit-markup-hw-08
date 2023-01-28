@@ -3,9 +3,10 @@
   flex-direction: column;
 
   &__text {
+    text-align: center;
     font-weight: 700;
     font-size: 20px;
-    line-height: 1.15;
+    line-height: 1.5;
     color: var(--secondary-text-color);
     margin-bottom: 12px;
   }
@@ -79,8 +80,8 @@
   display: flex;
   align-items: center;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.16;
   color: #757575;
 
   &::before {
@@ -101,5 +102,15 @@
 
   .modal-form__term:focus + &::before {
     border-color: var(--accent-color);
+  }
+}
+
+@media (min-width: 1200px) {
+  .modal-form__text {
+    line-height: 1.15;
+  }
+  .modal-form__check-desc {
+    font-size: 14px;
+    line-height: 1.71;
   }
 }
