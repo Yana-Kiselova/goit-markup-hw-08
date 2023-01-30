@@ -83,7 +83,9 @@
   padding-left: 40px;
   padding-top: 48px;
   padding-bottom: 48px;
-  background-color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
   transform: translateY(-120%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -95,9 +97,6 @@
     &:hover {
       color: var(--accent-color);
     }
-  }
-  &__list {
-    margin-bottom: 302px;
   }
 
   &__item:not(:last-child) {
@@ -117,10 +116,15 @@
   }
 
   &__list-contact {
+    margin-top: auto;
     margin-bottom: 64px;
   }
   &__social-list {
     display: flex;
+  }
+
+  &__social-item:not(:last-child) {
+    border-right: 1px solid;
   }
 
   &__link-tel {
